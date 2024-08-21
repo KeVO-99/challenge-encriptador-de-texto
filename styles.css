@@ -59,6 +59,34 @@ main {
 
 .mensaje:focus { outline: none; }
 
+.mensaje-textos {
+    position: absolute;
+    top: 72%;
+    left: 79%;
+    width: 18%;
+    pointer-events: none;
+    background-color: white;
+}
+
+.texto-1 {
+    color: #343A40;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    background: transparent;
+    text-align: center;
+}
+
+.texto-2 {
+    color: #495057;
+    font-size: 12px;
+    text-align: center;
+    margin: 10px 0;
+    background: transparent;
+    text-align: center;
+}
+
 .botones {
     display: flex;
     margin-top: 18px;
