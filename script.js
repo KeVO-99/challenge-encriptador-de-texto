@@ -31,3 +31,26 @@ function encriptar(stringEncriptada) {
     }
     return stringEncriptada
 }
+
+function botonDesencriptar() {
+    const textoEncriptado = desencriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = '';
+    mensaje.style.backgroundImage = 'none';
+    mensajeTextos.style.display = 'none';
+    botonCopiar.style.display = 'block';
+    
+}
+
+function desencriptar(stringDesencriptada) {
+    let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for(i = 0; i < matrizCodigo.length; i++) {
+        if(stringDesencriptada.includes(matrizCodigo[i][1])) {
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
+        }
+    }
+    return stringDesencriptada
+}
+
