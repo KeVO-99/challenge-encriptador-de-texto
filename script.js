@@ -54,6 +54,14 @@ function desencriptar(stringDesencriptada) {
     return stringDesencriptada
 }
 
+function botonCopiarTexto() {
+    copiar();
+    botonCopiar.style.display = 'none';
+    mensaje.value = '';
+    mensaje.style.backgroundImage = 'url(images/muñeco.png)';
+    mensajeTextos.style.display = 'block';
+} 
+
 function copiar() {
     const textoACopiar = mensaje.value;
     navigator.clipboard.writeText(textoACopiar)
