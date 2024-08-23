@@ -54,3 +54,14 @@ function desencriptar(stringDesencriptada) {
     return stringDesencriptada
 }
 
+function copiar() {
+    const textoACopiar = mensaje.value;
+    navigator.clipboard.writeText(textoACopiar)
+    .then(() => {
+        console.log('Texto copiado al portapapeles');
+    })
+    .catch(err => {
+        console.error('Error al copiar el texto: ', err);
+    });
+}
+ 
