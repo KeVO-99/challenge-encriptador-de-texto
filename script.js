@@ -12,6 +12,10 @@ La letra "u" es convertida para "ufat"
 */ 
 
 function botonEncriptar() {
+    if (!validarTexto(textArea.value)) {
+        return;
+    }
+    
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = '';
@@ -33,6 +37,10 @@ function encriptar(stringEncriptada) {
 }
 
 function botonDesencriptar() {
+    if (!validarTexto(textArea.value)) {
+        return;
+    }
+    
     const textoEncriptado = desencriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = '';
@@ -73,3 +81,14 @@ function copiar() {
     });
 }
  
+function validarTexto(string) {
+    const regex = /^[a-zA-Z0-9\s]+$/;
+
+    if (regex.test(string)) {
+        return true; 
+    } else {
+        textArea.value = '';
+        alert("El texto contiene caracteres no permitidos. Por favor, utiliza solo letras minúsculas, sin acentos y sin caracteres especiales.");
+        return false;
+    }
+}
