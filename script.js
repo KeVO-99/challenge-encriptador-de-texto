@@ -26,7 +26,6 @@ function botonEncriptar() {
 
 function encriptar(stringEncriptada) {
     let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
-    stringEncriptada = stringEncriptada.toLowerCase();
 
     for(i = 0; i < matrizCodigo.length; i++) {
         if(stringEncriptada.includes(matrizCodigo[i][0])) {
@@ -52,7 +51,6 @@ function botonDesencriptar() {
 
 function desencriptar(stringDesencriptada) {
     let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
-    stringDesencriptada = stringDesencriptada.toLowerCase();
 
     for(i = 0; i < matrizCodigo.length; i++) {
         if(stringDesencriptada.includes(matrizCodigo[i][1])) {
@@ -82,7 +80,7 @@ function copiar() {
 }
  
 function validarTexto(string) {
-    const regex = /^[a-zA-Z0-9\s]+$/;
+    const regex = /^[a-z0-9\s]+$/;
 
     if (regex.test(string)) {
         return true; 
