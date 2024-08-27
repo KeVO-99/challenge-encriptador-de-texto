@@ -48,6 +48,8 @@ Las "llaves" de encriptación utilizadas son las siguientes:
 * La letra "o" se convierte en "ober".
 * La letra "u" se convierte en "ufat".
 
+Imagenes:
+
 ![imagen-del-encriptador](images/encriptador-1.jpg "Imagen del encriptador")
 ![imagen-del-encriptador](images/encriptador-2.jpg "Imagen del encriptador")
 ![imagen-del-encriptador](images/encriptador-3.jpg "Imagen del encriptador")
